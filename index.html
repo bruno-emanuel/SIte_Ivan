@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ivan Leal TI – Técnico em Informática</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;800;900&family=Barlow:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            display: ['Barlow Condensed', 'sans-serif'],
+            body: ['Barlow', 'sans-serif'],
+          },
+          colors: {
+            brand: {
+              blue:  '#0B56FF',
+              dark:  '#060D1A',
+              gray:  '#0F1C30',
+              light: '#E8EFFF',
+              accent:'#00D4FF',
+            }
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="bg-brand-dark text-white font-body overflow-x-hidden">
+
+  <!-- ░░ NAV ░░ -->
+  <nav id="navbar" class="fixed top-0 left-0 w-full z-50 transition-all duration-300">
+    <div class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
+      <a href="#inicio" class="font-display font-800 text-2xl tracking-widest text-white uppercase">
+        Ivan<span class="text-brand-accent">.</span>Leal<span class="text-brand-blue text-sm font-600 ml-1">TI</span>
+      </a>
+      <div class="hidden md:flex gap-8 items-center font-display font-600 text-sm tracking-widest uppercase">
+        <a href="#sobre" class="nav-link">Sobre</a>
+        <a href="#servicos" class="nav-link">Serviços</a>
+        <a href="#avaliacoes" class="nav-link">Avaliações</a>
+        <a href="#contato" class="nav-link">Contato</a>
+        <a href="https://wa.me/5561982386026" target="_blank"
+           class="bg-brand-blue hover:bg-brand-accent text-white px-5 py-2 rounded-sm transition-all duration-200 tracking-widest">
+          WhatsApp
+        </a>
+      </div>
+      <button id="menuBtn" class="md:hidden text-white text-2xl">☰</button>
+    </div>
+    <!-- Mobile menu -->
+    <div id="mobileMenu" class="hidden md:hidden bg-brand-gray px-6 pb-4 flex flex-col gap-4 font-display font-600 text-sm tracking-widest uppercase">
+      <a href="#sobre" class="nav-link py-2 border-b border-white/10">Sobre</a>
+      <a href="#servicos" class="nav-link py-2 border-b border-white/10">Serviços</a>
+      <a href="#avaliacoes" class="nav-link py-2 border-b border-white/10">Avaliações</a>
+      <a href="#contato" class="nav-link py-2">Contato</a>
+    </div>
+  </nav>
+
+  <!-- ░░ HERO ░░ -->
+  <section id="inicio" class="hero-section relative min-h-screen flex items-center justify-center overflow-hidden">
+    <div class="hero-bg absolute inset-0"></div>
+    <div class="grid-overlay absolute inset-0 opacity-20"></div>
+    <div class="relative z-10 text-center px-6 max-w-5xl mx-auto">
+      <p class="font-display text-brand-accent tracking-[0.4em] text-sm font-600 uppercase mb-4 fade-up" style="animation-delay:.1s">
+        ★ 5.0 · 130+ Avaliações Google ★
+      </p>
+      <h1 class="font-display font-900 text-6xl sm:text-8xl md:text-[110px] leading-none uppercase tracking-tight text-white fade-up" style="animation-delay:.2s">
+        Ivan<br/><span class="text-stroke">Leal</span>
+      </h1>
+      <p class="font-display font-700 text-brand-blue text-xl md:text-3xl tracking-[0.25em] uppercase mt-3 fade-up" style="animation-delay:.35s">
+        Técnico em Informática
+      </p>
+      <p class="font-body text-white/60 text-base md:text-lg mt-6 max-w-xl mx-auto fade-up" style="animation-delay:.5s">
+        10 anos montando e consertando computadores em Luziânia–GO.<br/>
+        Centenas de clientes satisfeitos.
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center mt-10 fade-up" style="animation-delay:.65s">
+        <a href="https://wa.me/5561982386026" target="_blank"
+           class="btn-primary font-display font-700 uppercase tracking-widest text-sm px-8 py-4">
+          💬 Falar no WhatsApp
+        </a>
+        <a href="#servicos"
+           class="btn-outline font-display font-700 uppercase tracking-widest text-sm px-8 py-4">
+          Ver Serviços
+        </a>
+      </div>
+    </div>
+    <!-- scroll indicator -->
+    <div class="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 opacity-40">
+      <span class="font-display text-xs tracking-widest uppercase text-white">Scroll</span>
+      <div class="w-px h-12 bg-white scroll-line"></div>
+    </div>
+  </section>
+
+  <!-- ░░ SOBRE ░░ -->
+  <section id="sobre" class="py-24 px-6 max-w-6xl mx-auto">
+    <div class="grid md:grid-cols-2 gap-16 items-center">
+      <div class="relative">
+        <div class="absolute -inset-4 bg-brand-blue/10 rounded-sm blur-xl"></div>
+        <img src="https://images.unsplash.com/photo-1587831990711-23ca6441447b?w=600&q=80"
+             alt="Técnico em informática"
+             class="relative w-full aspect-[4/5] object-cover rounded-sm border border-white/10" />
+        <div class="absolute bottom-6 left-6 bg-brand-dark/90 backdrop-blur border border-brand-blue/40 px-5 py-3 rounded-sm">
+          <p class="font-display font-800 text-3xl text-brand-accent">10+</p>
+          <p class="font-body text-xs text-white/60 uppercase tracking-widest">Anos de experiência</p>
+        </div>
+      </div>
+      <div>
+        <p class="font-display text-brand-blue tracking-[0.3em] text-xs font-600 uppercase mb-4">Quem sou</p>
+        <h2 class="font-display font-800 text-5xl md:text-6xl uppercase leading-none text-white mb-6">
+          Hi-Tech<br/><span class="text-brand-blue">Solutions</span>
+        </h2>
+        <p class="font-body text-white/70 text-base leading-relaxed mb-5">
+          Olá, sou o Ivan Leal. Sou Técnico em Informática e especialista em hardware. Trabalho com montagem, configuração e manutenção de computadores e videogames desde 2016.
+        </p>
+        <p class="font-body text-white/70 text-base leading-relaxed mb-8">
+          Já são centenas de clientes satisfeitos — você pode conferir as avaliações no Google. São 10 anos montando computadores de alta qualidade, desempenho e confiabilidade. Entre em contato para fazermos um orçamento sem compromisso.
+        </p>
+        <div class="grid grid-cols-3 gap-4 mb-8">
+          <div class="text-center p-4 border border-white/10 rounded-sm">
+            <p class="font-display font-800 text-2xl text-brand-accent">5.0</p>
+            <p class="font-body text-xs text-white/50 uppercase tracking-widest mt-1">Nota Google</p>
+          </div>
+          <div class="text-center p-4 border border-white/10 rounded-sm">
+            <p class="font-display font-800 text-2xl text-brand-accent">130+</p>
+            <p class="font-body text-xs text-white/50 uppercase tracking-widest mt-1">Avaliações</p>
+          </div>
+          <div class="text-center p-4 border border-white/10 rounded-sm">
+            <p class="font-display font-800 text-2xl text-brand-accent">2016</p>
+            <p class="font-body text-xs text-white/50 uppercase tracking-widest mt-1">Desde</p>
+          </div>
+        </div>
+        <a href="https://wa.me/5561982386026" target="_blank"
+           class="btn-primary font-display font-700 uppercase tracking-widest text-sm px-8 py-4 inline-block">
+          Solicitar Orçamento
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ░░ SERVIÇOS ░░ -->
+  <section id="servicos" class="py-24 px-6 bg-brand-gray/50 relative overflow-hidden">
+    <div class="diagonal-bg absolute inset-0 opacity-5"></div>
+    <div class="max-w-6xl mx-auto relative z-10">
+      <div class="text-center mb-16">
+        <p class="font-display text-brand-blue tracking-[0.3em] text-xs font-600 uppercase mb-4">O que faço</p>
+        <h2 class="font-display font-800 text-5xl md:text-6xl uppercase leading-none text-white">
+          Serviços
+        </h2>
+      </div>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6" id="servicesGrid">
+        <!-- cards gerados pelo JS -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ░░ SSD DESTAQUE ░░ -->
+  <section class="py-24 px-6 max-w-6xl mx-auto">
+    <div class="relative rounded-sm overflow-hidden border border-brand-blue/30">
+      <div class="absolute inset-0 bg-gradient-to-br from-brand-blue/20 to-brand-accent/5"></div>
+      <div class="relative grid md:grid-cols-2 gap-0">
+        <div class="p-10 md:p-14 flex flex-col justify-center">
+          <p class="font-display text-brand-accent tracking-[0.3em] text-xs font-600 uppercase mb-4">Upgrade recomendado</p>
+          <h3 class="font-display font-900 text-4xl md:text-5xl uppercase leading-none text-white mb-6">
+            Deixe seu PC<br/><span class="text-brand-blue">10x mais rápido</span>
+          </h3>
+          <p class="font-body text-white/70 text-sm leading-relaxed mb-8">
+            O SSD não é mais luxo — é componente primordial. Muito mais rápido e confiável que HD comum, sem partes mecânicas. Qualquer computador se transforma com um SSD, e parcelamos em até 12x nos cartões.
+          </p>
+          <a href="https://wa.me/5561982386026?text=Olá%20Ivan!%20Tenho%20interesse%20em%20instalar%20um%20SSD." target="_blank"
+             class="btn-primary font-display font-700 uppercase tracking-widest text-sm px-8 py-4 inline-block self-start">
+            Quero meu SSD agora
+          </a>
+        </div>
+        <div class="relative h-64 md:h-auto overflow-hidden">
+          <img src="https://images.unsplash.com/photo-1597872200969-2b65d56bd16b?w=800&q=80"
+               alt="SSD Kingston"
+               class="w-full h-full object-cover" />
+          <div class="absolute inset-0 bg-gradient-to-r from-brand-dark/60 to-transparent md:from-transparent md:to-brand-dark/30"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ░░ AVALIAÇÕES ░░ -->
+  <section id="avaliacoes" class="py-24 px-6 bg-brand-gray/50">
+    <div class="max-w-6xl mx-auto">
+      <div class="text-center mb-16">
+        <p class="font-display text-brand-blue tracking-[0.3em] text-xs font-600 uppercase mb-4">Google Reviews</p>
+        <h2 class="font-display font-800 text-5xl md:text-6xl uppercase leading-none text-white mb-4">
+          O que dizem<br/>os clientes
+        </h2>
+        <div class="flex items-center justify-center gap-3 mt-4">
+          <span class="text-yellow-400 text-2xl">★★★★★</span>
+          <span class="font-display font-800 text-3xl text-white">5.0</span>
+          <span class="font-body text-white/50 text-sm">· 130+ avaliações</span>
+        </div>
+      </div>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6" id="reviewsGrid">
+        <!-- reviews geradas pelo JS -->
+      </div>
+      <div class="text-center mt-12">
+        <a href="https://www.google.com/maps/search/?api=1&query=Ivan%20Leal%20-%20T%C3%A9cnico%20em%20Inform%C3%A1tica%20-%20Hi-Tech%20Solutions&query_place_id=ChIJIc36R-6FWZMRrYIulnXaQeU"
+           target="_blank"
+           class="btn-outline font-display font-700 uppercase tracking-widest text-sm px-8 py-4 inline-block">
+          Ver todas no Google Maps
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ░░ ESTABILIZADOR BLOG ░░ -->
+  <section class="py-24 px-6 max-w-6xl mx-auto">
+    <div class="relative rounded-sm overflow-hidden border border-red-500/30 bg-red-950/20">
+      <div class="p-10 md:p-14 grid md:grid-cols-2 gap-8 items-center">
+        <div>
+          <span class="inline-block bg-red-500 text-white font-display font-700 text-xs px-3 py-1 rounded-sm tracking-widest uppercase mb-4">Dica importante</span>
+          <h3 class="font-display font-900 text-4xl md:text-5xl uppercase leading-none text-white mb-5">
+            Pare de usar<br/><span class="text-red-400">estabilizador</span><br/>imediatamente
+          </h3>
+          <p class="font-body text-white/60 text-sm leading-relaxed mb-6">
+            O estabilizador pode estar colocando seu computador em risco. O chaveamento do relé gera surtos de tensão que danificam componentes — o oposto do que você pensa que ele faz.
+          </p>
+          <a href="https://www.ivanlealti.com" target="_blank"
+             class="font-display font-600 text-red-400 uppercase tracking-widest text-xs underline underline-offset-4">
+            Ler artigo completo →
+          </a>
+        </div>
+        <div class="text-center">
+          <div class="text-8xl mb-4">⚡</div>
+          <p class="font-display font-700 text-white/40 text-xs uppercase tracking-widest">Use um filtro de linha com DPS</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ░░ CONTATO ░░ -->
+  <section id="contato" class="py-24 px-6 bg-brand-gray/50">
+    <div class="max-w-6xl mx-auto">
+      <div class="text-center mb-16">
+        <p class="font-display text-brand-blue tracking-[0.3em] text-xs font-600 uppercase mb-4">Vamos conversar</p>
+        <h2 class="font-display font-800 text-5xl md:text-6xl uppercase leading-none text-white">
+          Entre em<br/>Contato
+        </h2>
+      </div>
+      <div class="grid md:grid-cols-3 gap-6">
+        <a href="https://wa.me/5561982386026" target="_blank" class="contact-card group">
+          <div class="text-4xl mb-4">💬</div>
+          <p class="font-display font-700 text-xl uppercase tracking-wide text-white mb-2">WhatsApp</p>
+          <p class="font-body text-white/50 text-sm">(61) 98238-6026</p>
+          <p class="font-display text-brand-accent text-xs uppercase tracking-widest mt-4 group-hover:translate-x-2 transition-transform">Chamar agora →</p>
+        </a>
+        <a href="https://www.google.com/maps/search/?api=1&query=Ivan%20Leal%20-%20T%C3%A9cnico%20em%20Inform%C3%A1tica%20-%20Hi-Tech%20Solutions&query_place_id=ChIJIc36R-6FWZMRrYIulnXaQeU"
+           target="_blank" class="contact-card group">
+          <div class="text-4xl mb-4">📍</div>
+          <p class="font-display font-700 text-xl uppercase tracking-wide text-white mb-2">Localização</p>
+          <p class="font-body text-white/50 text-sm">R. Bebedouro, Quadra 18 – Lote 31<br/>Luziânia, Goiás</p>
+          <p class="font-display text-brand-accent text-xs uppercase tracking-widest mt-4 group-hover:translate-x-2 transition-transform">Ver no Maps →</p>
+        </a>
+        <a href="https://www.ivanlealti.com" target="_blank" class="contact-card group">
+          <div class="text-4xl mb-4">🌐</div>
+          <p class="font-display font-700 text-xl uppercase tracking-wide text-white mb-2">Site</p>
+          <p class="font-body text-white/50 text-sm">ivanlealti.com</p>
+          <p class="font-display text-brand-accent text-xs uppercase tracking-widest mt-4 group-hover:translate-x-2 transition-transform">Visitar →</p>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ░░ FOOTER ░░ -->
+  <footer class="border-t border-white/10 py-10 px-6">
+    <div class="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
+      <p class="font-display font-800 text-xl tracking-widest uppercase">
+        Ivan<span class="text-brand-accent">.</span>Leal<span class="text-brand-blue text-sm font-600 ml-1">TI</span>
+      </p>
+      <p class="font-body text-white/30 text-sm">
+        © 2026 Ivan Leal – Técnico em Informática · Luziânia, GO
+      </p>
+      <a href="https://wa.me/5561982386026" target="_blank"
+         class="font-display font-700 text-brand-blue text-sm uppercase tracking-widest hover:text-brand-accent transition-colors">
+        (61) 98238-6026
+      </a>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>
